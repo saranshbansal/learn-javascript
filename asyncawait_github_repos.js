@@ -11,4 +11,4 @@ const fetchPublicReposCount = async username => {
   console.log(json["public_repos"]);
 };
 
-fetchPublicReposCount("sbansal");
+fetchPublicReposCount("saranshbansal");
