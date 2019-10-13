@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flexbox CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .flex-container {
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            flex-flow: row wrap;
+            background-color: DodgerBlue;
+            /* justify-content: space-between; */
+            height: 200px;
+            align-items: center;
+        }
+
+        .flex-container>div {
+            background-color: #f1f1f1;
+            width: 100px;
+            line-height: 75px;
+            text-align: center;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+    <style>
+        .flex-container2 {
+            display: flex;
+            background-color: DodgerBlue;
+            height: 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-container2>div {
+            background-color: #f1f1f1;
+            width: 100px;
+            line-height: 75px;
+            text-align: center;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+    <style>
+        .flex-container3 {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+        }
+
+        .flex-container3>div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+    <style>
+        table.w3-table-all {
+            margin: 20px 0;
+        }
+
+        .w3-table-all {
+            border: 1px solid #ccc;
+        }
+
+        .w3-table,
+        .w3-table-all {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            display: table;
+        }
+
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+        .w3-table-all tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        .w3-bordered tr,
+        .w3-table-all tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .w3-table th:first-child,
+        .w3-table td:first-child,
+        .w3-table-all th:first-child,
+        .w3-table-all td:first-child {
+            padding-left: 16px;
+        }
+
+        .w3-table td,
+        .w3-table th,
+        .w3-table-all td,
+        .w3-table-all th {
+            padding: 8px 8px;
+            display: table-cell;
+            text-align: left;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="https://www.w3schools.com/css/css3_flexbox.asp">w3schools: Flexbox</a>
+    </div>
+    <br>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <p>The flex container properties are:</p>
+    <ul>
+        <li>flex-direction</li>
+        <li>flex-wrap</li>
+        <li>flex-flow</li>
+        <li>justify-content</li>
+        <li>align-items</li>
+        <li>align-content</li>
+    </ul>
+
+    <p>Perfect centering:</p>
+    <div class="flex-container2">
+        <div>1</div>
+    </div>
+
+    <p>Flex properties on child elements:</p>
+    <p>1. The order property can change the order of the flex items:</p>
+    <div class="flex-container3">
+        <div style="order: 3">1</div>
+        <div style="order: 2">2</div>
+        <div style="order: 4">3</div>
+        <div style="order: 1">4</div>
+    </div>
+
+    <p>2. The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items:</p>
+    <div class="flex-container3">
+        <div style="flex-grow: 1">1</div>
+        <div style="flex-grow: 2">2</div>
+        <div style="flex-grow: 3">3</div>
+        <div style="flex-grow: 4">4</div>
+    </div>
+
+    <p>3. The flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items:
+    </p>
+
+    <div class="flex-container3">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-shrink: 0">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+    </div>
+
+    <p>4. The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.</p>
+    <div class="flex-container3">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex: 0 0 200px">3</div>
+        <div>4</div>
+    </div>
+
+    <h2>CSS Flexbox Properties</h2>
+    <p>The following table lists the CSS properties used with flexbox:</p>
+    <table class="w3-table-all notranslate">
+        <tbody>
+            <tr>
+                <th style="width:25%">Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>display</td>
+                <td>Specifies the type of box used for an HTML element</td>
+            </tr>
+            <tr>
+                <td>flex-direction</td>
+                <td>Specifies the direction of the flexible items inside a flex container</td>
+            </tr>
+            <tr>
+                <td>justify-content</td>
+                <td>Horizontally aligns the flex items when the items do not use all available space on the main-axis
+                </td>
+            </tr>
+            <tr>
+                <td>align-items</td>
+                <td>Vertically aligns the flex items when the items do not use all available space on the cross-axis
+                </td>
+            </tr>
+            <tr>
+                <td>flex-wrap</td>
+                <td>Specifies whether the flex items should wrap or not, if there is not enough room for them on one
+                    flex line</td>
+            </tr>
+            <tr>
+                <td>align-content</td>
+                <td>Modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of
+                    aligning flex items, it aligns flex lines</td>
+            </tr>
+            <tr>
+                <td>flex-flow</td>
+                <td>A shorthand property for flex-direction and flex-wrap</td>
+            </tr>
+            <tr>
+                <td>order</td>
+                <td>Specifies the order of a flexible item relative to the rest of the flex items inside the same
+                    container</td>
+            </tr>
+            <tr>
+                <td>align-self</td>
+                <td>Used on flex items. Overrides the container's align-items property</td>
+            </tr>
+            <tr>
+                <td>flex</td>
+                <td>A shorthand property for the flex-grow, flex-shrink, and the flex-basis
+                    properties</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
