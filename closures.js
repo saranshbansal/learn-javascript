@@ -27,3 +27,7 @@ console.log(myDragon.attack());
 myDragon.levelUp();
 
 console.log(myDragon.attack());
+
+myDragon.levelUp();
+
+console.log(myDragon.attack());
