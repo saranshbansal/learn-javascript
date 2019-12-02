@@ -7,7 +7,7 @@ var res = (function(
     var x;
     var y = x;
     x = "B";
-    return [f(x), y, f()];
+    return [x, f(x), y, f()];
   })("A");
   
   console.log("1. ", res);
